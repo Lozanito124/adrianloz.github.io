@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    font-family: "MS Sans Serif", Tahoma, sans-serif;
+    background-color: #0f7474;
+    color: black;
+}
+
+.desktop {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    height: 100vh;
+}
+
+.logoWin98{
+    z-index: -1001;
+    position: fixed;
+    
+}
+
+.icon {
+    text-align: center;
+    width: 70px;
+    margin: 10px;
+    cursor: pointer;
+    color: white;
+}
+
+.icon img {
+    width: 48px;
+    height: 48px;
+}
+
+.icon p {
+    margin: 4px 0 0;
+    font-size: 12px;
+}
+
+.window {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 300px;
+    border: 2px solid #000;
+    background-color: #C0C0C0;
+    box-shadow: 4px 4px 0 #404040;
+}
+
+.hidden {
+    display: none;
+}
+
+.title-bar {
+    background: linear-gradient(#000080, #0000A0);
+    color: white;
+    padding: 4px 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.title-bar button {
+    background-color: #C0C0C0;
+    border: 1px solid #404040;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.window-content {
+    padding: 10px;
+    background-color: #DFDFDF;
+}

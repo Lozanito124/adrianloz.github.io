@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Retro - Adrián Lozano</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="desktop">
+        <img src="img/Windows_98_stacked_logo.svg" alt="" class="logoWin98">
+        <div class="icon" onclick="openWindow('proyectos')">
+            <img src="img/directory_closed_cool-3.png" alt="Proyectos">
+            <p>Proyectos</p>
+        </div>
+        <div class="icon" onclick="openWindow('sobre')">
+            <img src="img/directory_closed_cool-3.png" alt="Sobre mí">
+            <p>Sobre mí</p>
+        </div>
+        <div class="icon" onclick="openWindow('contacto')">
+            <img src="img/directory_closed_cool-3.png" alt="Contacto">
+            <p>Contacto</p>
+        </div>
+    </div>
+
+    <!-- Ventanas -->
+    <div id="proyectos" class="window hidden">
+        <div class="title-bar">
+            <span>Proyectos</span>
+            <button onclick="closeWindow('proyectos')">X</button>
+        </div>
+        <div class="window-content">
+            <p>Aquí irían tus proyectos: webs, prácticas, TFG, etc.</p>
+        </div>
+    </div>
+
+    <div id="sobre" class="window hidden">
+        <div class="title-bar">
+            <span>Sobre mí</span>
+            <button onclick="closeWindow('sobre')">X</button>
+        </div>
+        <div class="window-content">
+            <p>Hola, soy Adrián Lozano, desarrollador web en formación (DAW).</p>
+        </div>
+    </div>
+
+    <div id="contacto" class="window hidden">
+        <div class="title-bar">
+            <span>Contacto</span>
+            <button onclick="closeWindow('contacto')">X</button>
+        </div>
+        <div class="window-content">
+            <p>📧 contacto@decorapiso.es</p>
+            <p>📞 611 675 688</p>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
