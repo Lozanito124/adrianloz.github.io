@@ -1,61 +1,126 @@
-
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Retro - Adrián Lozano</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <div class="desktop">
+    <div class="escritorio">
         <img src="img/Windows_98_stacked_logo.svg" alt="" class="logoWin98">
-        <div class="icon" onclick="openWindow('proyectos')">
-            <img src="img/directory_closed_cool-3.png" alt="Proyectos">
-            <p>Proyectos</p>
+        <div class="aplicacion">
+            <img src="img/recycle_bin_full_cool-2.png">
+            <p>Papelera de Reciclaje</p>
         </div>
-        <div class="icon" onclick="openWindow('sobre')">
-            <img src="img/directory_closed_cool-3.png" alt="Sobre mí">
-            <p>Sobre mí</p>
+        <div class="aplicacion">
+            <img src="img/internet_connection_wiz-3.png">
+            <p>Internet</p>
         </div>
-        <div class="icon" onclick="openWindow('contacto')">
-            <img src="img/directory_closed_cool-3.png" alt="Contacto">
-            <p>Contacto</p>
+        <div class="aplicacion">
+            <img src="img/computer_explorer_cool-5.png">
+            <p>Este Equipo</p>
+        </div>
+        <div class="aplicacion" onclick="openWindow('sobre')">
+            <img src="img/users-2.png">
+            <p>Sobre Mi</p>
+        </div>
+        <div class="aplicacion" onclick="openWindow('curriculum')">
+            <img src="img/winrep-1.png">
+            <p>Curriculum</p>
+        </div>
+        <div class="aplicacion" onclick="openWindow('proyectos')">
+            <img src="img/directory_control_panel-3.png">
+            <p>Mis Proyectos</p>
+        </div>
+        <div class="aplicacion" onclick="openWindow('contactame')">
+            <img src="img/modem-3.png">
+            <p>Contactame</p>
         </div>
     </div>
 
-    <!-- Ventanas -->
     <div id="proyectos" class="window hidden">
-        <div class="title-bar">
-            <span>Proyectos</span>
-            <button onclick="closeWindow('proyectos')">X</button>
+        <div class="titulo-pestaña">
+            <div>
+                <span>Proyectos</span>
+            </div>
+            <div>
+                <button onclick="minimizar('proyectos')">-</button>
+                <button onclick="maximizar('proyectos')">▢</button>
+                <button onclick="closeWindow('proyectos')">X</button>
+            </div>
+
         </div>
-        <div class="window-content">
+        <div class="contenido-pestaña">
             <p>Aquí irían tus proyectos: webs, prácticas, TFG, etc.</p>
         </div>
     </div>
 
-    <div id="sobre" class="window hidden">
-        <div class="title-bar">
-            <span>Sobre mí</span>
-            <button onclick="closeWindow('sobre')">X</button>
+    <div id="curriculum" class="window hidden">
+        <div class="titulo-pestaña">
+            <div>
+                <span>Curriculum</span>
+            </div>
+            <div>
+                <button onclick="minimizar('curriculum')">-</button>
+                <button onclick="maximizar('curriculum')">▢</button>
+                <button onclick="closeWindow('curriculum')">X</button>
+            </div>
+
         </div>
-        <div class="window-content">
-            <p>Hola, soy Adrián Lozano, desarrollador web en formación (DAW).</p>
+        <div class="contenido-pestaña">
+            <p>Aquí irían tus curriculum</p>
         </div>
     </div>
 
-    <div id="contacto" class="window hidden">
-        <div class="title-bar">
-            <span>Contacto</span>
-            <button onclick="closeWindow('contacto')">X</button>
+    <div id="sobre" class="window hidden">
+        <div class="titulo-pestaña">
+            <div>
+                <span>Sobre Mi</span>
+            </div>
+            <div>
+                <button onclick="minimizar('sobre')">-</button>
+                <button onclick="maximizar('sobre')">▢</button>
+                <button onclick="closeWindow('sobre')">X</button>
+            </div>
+
         </div>
-        <div class="window-content">
-            <p>📧 contacto@decorapiso.es</p>
-            <p>📞 611 675 688</p>
+        <div class="contenido-pestaña">
+            <p>SOBRE MI</p>
         </div>
     </div>
+
+    <div id="contactame" class="window hidden">
+        <div class="titulo-pestaña">
+            <div>
+                <span>Contactame</span>
+            </div>
+            <div>
+                <button onclick="minimizar('contactame')">-</button>
+                <button onclick="maximizar('contactame')">▢</button>
+                <button onclick="closeWindow('contactame')">X</button>
+            </div>
+        </div>
+        <div class="contenido-pestaña">
+            <p>CONTACTAME</p>
+        </div>
+    </div>
+
+    <footer class="barra-tareas">
+        <div class="boton-inicio">
+            <img src="img/Windows_Logo_(1992-2001).svg.png" alt="Inicio">
+            <span>Inicio</span>
+        </div>
+        <div class="ventanas-abiertas">
+        </div>
+        <div class="reloj">
+            <span id="hora"></span>
+        </div>
+    </footer>
 
     <script src="js/script.js"></script>
 </body>
+
 </html>
