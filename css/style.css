@@ -48,10 +48,12 @@ body {
     position: absolute;
     top: 100px;
     left: 100px;
-    width: 300px;
+    min-width: 600px;
+    min-height: 600px;
+    height: 600px;
     border: 2px solid #000;
     background-color: #C0C0C0;
-    box-shadow: 4px 4px 0 #404040;
+    box-shadow: 4px 52px 0 #404040;
 }
 
 .hidden {
@@ -59,7 +61,7 @@ body {
 }
 
 .titulo-pestaña {
-    background: linear-gradient(#000080, #0000A0);
+    background:#000080;
     color: white;
     padding: 4px 8px;   
     display: flex;
@@ -83,6 +85,7 @@ body {
 .contenido-pestaña {
     padding: 10px;
     background-color: #DFDFDF;
+    height: 100%;
 }
 
 footer.barra-tareas {
@@ -118,8 +121,6 @@ footer.barra-tareas {
     width: 32px;
     margin-right: 5px;
 }
-
-
 
 .reloj {
     background-color: #E0E0E0;

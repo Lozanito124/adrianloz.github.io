@@ -38,7 +38,7 @@ function makeDraggable(element) {
 function openWindow(id) {
     const win = document.getElementById(id);
     win.classList.remove("hidden");
-    makeDraggable(win); 
+    makeDraggable(win);
 }
 
 function maximizar(id) {
@@ -47,7 +47,7 @@ function maximizar(id) {
 
     if (isMax) {
         win.style.width = "300px";
-        win.style.height = "auto";
+        win.style.height = "600px";
         win.style.top = "100px";
         win.style.left = "100px";
         win.classList.remove("maximizada");
