@@ -1,0 +1,164 @@
+body {
+    margin: 0;
+    font-family: "MS Sans Serif", Tahoma, sans-serif;
+    background-color: #0f7474;
+    color: black;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 700'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' opacity='0.3' filter='url(%23a)'/%3E%3C/svg%3E");
+}
+
+.escritorio {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.logoWin98 {
+    z-index: -1001;
+    position: fixed;
+    left: 70%;
+    top: 5%;
+    width: 28%;
+}
+
+.aplicacion {
+    text-align: center;
+    width: 70px;
+    margin: 10px;
+    padding: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+.aplicacion:hover{
+    background-color: #00000023;
+}
+
+.aplicacion img {
+    width: 48px;
+    height: 48px;
+}
+
+.aplicacion p {
+    margin: 4px 0 0;
+    font-size: 12px;
+}
+
+.window {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 300px;
+    border: 2px solid #000;
+    background-color: #C0C0C0;
+    box-shadow: 4px 4px 0 #404040;
+}
+
+.hidden {
+    display: none;
+}
+
+.titulo-pestaña {
+    background: linear-gradient(#000080, #0000A0);
+    color: white;
+    padding: 4px 8px;   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 12px;
+    cursor: move;
+}
+
+.titulo-pestaña button {
+    background-color: #C0C0C0;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    display: inline-flex;
+    justify-content: center;
+}
+
+.contenido-pestaña {
+    padding: 10px;
+    background-color: #DFDFDF;
+}
+
+footer.barra-tareas {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: #C0C0C0;
+    border-top: 2px solid #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    box-shadow: inset 0 2px #808080;
+    font-size: 12px;
+}
+
+.boton-inicio {
+    display: flex;
+    align-items: center;
+    background: #C0C0C0; 
+    border: 2px solid #808080;
+    padding: 3px 8px;
+    cursor: pointer;
+}
+
+.boton-inicio:hover {
+    background: #A0A0A0;
+}
+
+.boton-inicio img {
+    width: 32px;
+    margin-right: 5px;
+}
+
+
+
+.reloj {
+    background-color: #E0E0E0;
+    border: 1px solid #808080;
+    padding: 2px 6px;
+    width: 60px;
+    text-align: center;
+    margin: 0 2.7vh;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .escritorio {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-bottom: 70px;
+    }
+
+    .logoWin98 {
+        position: static;
+        width: 60%;
+        margin: 20px auto;
+    }
+
+    .aplicacion {
+        width: 80px;
+        margin: 15px;
+    }
+
+    .window {
+        width: 90%;
+        left: 5%;
+        top: 80px;
+    }
+
+    footer.barra-tareas {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+}
