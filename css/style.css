@@ -30,7 +30,7 @@ body {
     color: white;
 }
 
-.aplicacion:hover{
+.aplicacion:hover {
     background-color: #00000023;
 }
 
@@ -50,6 +50,7 @@ body {
     left: 100px;
     min-width: 600px;
     min-height: 600px;
+    width: 600px;
     height: 600px;
     border: 2px solid #000;
     background-color: #C0C0C0;
@@ -61,14 +62,14 @@ body {
 }
 
 .titulo-pestaña {
-    background:#000080;
+    background: #000080;
     color: white;
-    padding: 4px 8px;   
+    padding: 4px 8px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 14px;
     cursor: move;
 }
 
@@ -86,6 +87,7 @@ body {
     padding: 10px;
     background-color: #DFDFDF;
     height: 100%;
+    font-size: 14px;
 }
 
 footer.barra-tareas {
@@ -107,7 +109,7 @@ footer.barra-tareas {
 .boton-inicio {
     display: flex;
     align-items: center;
-    background: #C0C0C0; 
+    background: #C0C0C0;
     border: 2px solid #808080;
     padding: 3px 8px;
     cursor: pointer;
@@ -120,6 +122,43 @@ footer.barra-tareas {
 .boton-inicio img {
     width: 32px;
     margin-right: 5px;
+}
+
+.contacto form {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 15px;
+}
+
+.contacto label {
+    font-weight: bold;
+}
+
+.contacto input,
+.contacto textarea {
+    border: 2px solid #808080;
+    background-color: #E0E0E0;
+    font-family: "MS Sans Serif", Tahoma, sans-serif;
+    padding: 4px;
+    resize: none;
+}
+
+.boton-enviar {
+    width: 90px;
+    margin-top: 8px;
+    background: #C0C0C0;
+    border: 2px solid #404040;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.boton-enviar:hover {
+    background: #A0A0A0;
+}
+
+.info-contacto {
+    border-top: 1px solid #808080;
 }
 
 .reloj {

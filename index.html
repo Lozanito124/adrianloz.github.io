@@ -36,6 +36,10 @@
             <img src="img/directory_control_panel-3.png">
             <p>Mis Proyectos</p>
         </div>
+        <div class="aplicacion" onclick="openWindow('habilidades')">
+            <img src="img/console_prompt-0.png">
+            <p>Habilidades Tecnicas</p>
+        </div>
         <div class="aplicacion" onclick="openWindow('contactame')">
             <img src="img/modem-3.png">
             <p>Contactame</p>
@@ -55,7 +59,7 @@
 
         </div>
         <div class="contenido-pestaña">
-            <p>Aquí irían tus proyectos: webs, prácticas, TFG, etc.</p>
+            <p>Añadiendo Proyectos...</p>
         </div>
     </div>
 
@@ -72,7 +76,7 @@
 
         </div>
         <div class="contenido-pestaña">
-            <iframe src="CV.pdf" width="100%" height="100%" style="border: none;">
+            <iframe src="assets/CV - Adrian Lozano.pdf" width="100%" height="100%" style="border: none;">
             </iframe>
         </div>
     </div>
@@ -89,7 +93,80 @@
             </div>
         </div>
         <div class="contenido-pestaña">
-            <p>SOBRE MI</p>
+            <h2>Bienvenido a mi Portfolio, soy Adrián Lozano y te cuento un poco sobre mí:</h2>
+
+            <p>
+                Soy un joven desarrollador web formándome en <strong>Digitech FP Málaga</strong>, cursando 2º DAW.
+                Me apasiona crear proyectos donde se mezclan el código, la estética y la funcionalidad.
+                Empecé programando en <strong>Java</strong> y ahora me especializo en
+                <strong>HTML, CSS, JavaScript y PHP</strong>.
+            </p>
+
+            <p>
+                Me gustan los retos y aprender resolviendo problemas.
+                Tengo experiencia trabajando en equipo y disfruto compartiendo ideas y soluciones creativas.
+                Me considero una persona <strong>curiosa, responsable y con ganas de seguir creciendo</strong>
+                en el mundo del desarrollo web.
+            </p>
+
+            <p>
+                En mi tiempo libre me gusta experimentar con nuevos diseños y pequeños proyectos personales,
+                además de participar en actividades que fomentan la <strong>colaboración, el compromiso y la
+                    superación</strong>,
+                valores que aplico también en mi forma de trabajar.
+            </p>
+
+            <p>
+                Si quieres saber más sobre mí o colaborar en algún proyecto,
+                puedes visitar mi sección de <strong>Contacto</strong> o descargar mi
+                <strong><a href="assets/CV - Adrian Lozano.pdf" download class="boton-descarga">Currículum</a></strong>.
+            </p>
+        </div>
+    </div>
+
+    <div id="habilidades" class="window hidden">
+        <div class="titulo-pestaña">
+            <div>
+                <span>Habilidades Técnicas</span>
+            </div>
+            <div>
+                <button onclick="minimizar('habilidades')">-</button>
+                <button onclick="maximizar('habilidades')">▢</button>
+                <button onclick="closeWindow('habilidades')">X</button>
+            </div>
+        </div>
+
+        <div class="contenido-pestaña">
+            <h2>💻 Lenguajes de Programación</h2>
+            <ul>
+                <li><strong>HTML5 / CSS3</strong> — Maquetación, diseño responsive y uso de flexbox / grid.</li>
+                <li><strong>JavaScript (ES6)</strong> — DOM, eventos, arrays, funciones y lógica dinámica.</li>
+                <li><strong>PHP</strong> — Programación en servidor, formularios, arrays y conexión con bases de datos.
+                </li>
+                <li><strong>Java</strong> — Programación orientada a objetos (POO), estructuras de datos básicas.</li>
+            </ul>
+
+            <h2>🧠 Bases de Datos</h2>
+            <ul>
+                <li><strong>MySQL</strong> — Creación de tablas, relaciones, consultas y CRUD básico.</li>
+                <li><strong>phpMyAdmin</strong> — Gestión visual y administración de bases de datos.</li>
+            </ul>
+
+            <h2>🧰 Herramientas y Entornos</h2>
+            <ul>
+                <li><strong>Visual Studio Code</strong> — Editor principal de desarrollo web.</li>
+                <li><strong>Git / GitHub</strong> — Control de versiones y despliegue en GitHub Pages.</li>
+                <li><strong>Figma / Canva</strong> — Diseño de interfaces y recursos visuales.</li>
+                <li><strong>Webempresa</strong> — Gestión de dominio y hosting de proyectos reales.</li>
+            </ul>
+
+            <h2>🧩 Otras Competencias</h2>
+            <ul>
+                <li>Trabajo en equipo y comunicación efectiva.</li>
+                <li>Organización y responsabilidad en proyectos.</li>
+                <li>Resolución de problemas y aprendizaje autónomo.</li>
+                <li>Creatividad y atención al detalle en diseño web.</li>
+            </ul>
         </div>
     </div>
 
@@ -104,14 +181,34 @@
                 <button onclick="closeWindow('contactame')">X</button>
             </div>
         </div>
-        <div class="contenido-pestaña">
-            <p>CONTACTAME</p>
+
+        <div class="contenido-pestaña contacto">
+            <h2>📞 Ponte en contacto conmigo</h2>
+            <p>
+                Si quieres hablar sobre proyectos u ofertas de trabajo, puede escribirme a través del
+                formulario o por telefono o correo electronico:
+            </p>
+            <form id="form-contacto" action="https://formspree.io/f/xzzkenpy" method="POST" onsubmit="enviarFormulario(event)">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Introduzca su Nombre" required>
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="Introduzca su Email (email@email.com)" required>
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="message" rows="4" placeholder="Introduzca su Mensaje" required></textarea>
+                <button type="submit" class="boton-enviar">Enviar</button>
+            </form>
+
+            <div class="info-contacto">
+                <p><strong>Email:</strong> adrianloz.asuntos@gmail.com</p>
+                <p><strong>Teléfono:</strong> +34 611 675 688</p>
+            </div>
         </div>
     </div>
 
+
     <footer class="barra-tareas">
         <div class="boton-inicio">
-            <img src="img/Windows_Logo_(1992-2001).svg.png" alt="Inicio">
+            <img src="img/Windows_Logo_(1992-2001).svg.png">
             <span>Inicio</span>
         </div>
         <div class="ventanas-abiertas">
@@ -121,6 +218,8 @@
         </div>
     </footer>
 
+
+    <audio id="clickSound" src="assets/click.mp3" preload="auto"></audio>
     <script src="js/script.js"></script>
 </body>
 
